@@ -1,0 +1,24 @@
+# FREECHAIN
+Para informação para usuários vide site goldencubist.github.io/freechainweb
+
+## DOCUMENTAÇÃO DO NÚCLEO DO FREECHAIN
+### INFORMAÇÃO DOS IDENTIFICADORES DE DADOS
+
+Byte 1: ID
+Byte 2: Operação
+Bytes 3-6: Tamanho da carga em Big Endian Bytes
+Bytes 7+: Carga
+
+ID: 1
+    Tipo: conexão cliente<->servidor para operações de mensagens
+ID: 2
+    Tipo: conexão cliente<->servidor para operações de usuário
+ID: 3
+    Tipo: conexão servidor<->servidor para sincronização de dados
+
+OP: 0
+    Operação: genérica (quando só há uma coisa a se fazer nesse tipo de ID)
+OP: 1
+    Operação: leitura, pegar um valor do servidor
+OP: 2
+    Operação: escrita, enviar um valor para o servidor
